@@ -10,18 +10,9 @@ import throttle from 'lodash.throttle';
       player.getVideoTitle().then(function(title) {
     });
 
-
-// player.on('timeupdate', throttle (function () {
-//     player.getCurrentTime().then(function (seconds) {
-//         save("videoplayer-current-time", JSON.stringify(seconds));
-//     });
-// }));
-
-
-    
     const TIME_DATA_PLAYER = 'videoplayer-current-time';
       player.on("timeupdate", throttle(function (data) {
-     const time = data.seconds;
+    const time = data.seconds;
       localStorage.setItem(TIME_DATA_PLAYER, time)},1000));
     
     const CURRENT_TIME = 'videoplayer-current-time';
