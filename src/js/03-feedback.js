@@ -4,7 +4,7 @@ const feedbackForm = document.querySelector(".feedback-form");
 const emailInput = document.querySelector("input");
 const messageInput = document.querySelector("textarea");
 
-const localObject = { email: ' ', message: ' ' }
+let localObject = { email: ' ', message: ' ' }
 
 feedbackForm.addEventListener("submit", submitForm);
 
