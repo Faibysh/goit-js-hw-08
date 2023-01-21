@@ -4,7 +4,7 @@ const feedbackForm = document.querySelector(".feedback-form");
 const emailInput = document.querySelector("input");
 const messageInput = document.querySelector("textarea");
 
-localObject = { email: ' ', message: ' ' }
+let localObject = { email: ' ', message: ' ' }
 
 feedbackForm.addEventListener("submit", submitForm);
 
@@ -17,7 +17,7 @@ function submitForm(evt) {
 feedbackForm.addEventListener("input", throttle(addLocalStorage, 500));
 
 function addLocalStorage(evt) {
-  localObject[evt.target.name] = evt.target.value;
+   localObject [evt.target.name] = evt.target.value;
    localStorage.setItem("feedback-form-state", JSON.stringify(localObject));
 } 
 
